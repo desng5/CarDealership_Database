@@ -76,6 +76,6 @@ VALUES
     (DEFAULT, 1, 1),
     (DEFAULT, 3, 3),
     (DEFAULT, 4, 3);
-    
-SELECT *
-FROM mechanics  ;
+--    
+--SELECT *
+--FROM parts;

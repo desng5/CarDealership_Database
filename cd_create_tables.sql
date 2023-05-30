@@ -1,5 +1,4 @@
 --CREATE DATABASE car_dealership;
---
 
 CREATE TABLE Salespersons (
     salesperson_id SERIAL PRIMARY KEY,
@@ -98,25 +97,37 @@ CREATE TABLE Car_Parts (
         REFERENCES Parts(part_id)
 );
 
---SELECT*
---FROM cars c;
---
---ALTER TABLE cars
---ADD COLUMN is_serviced BOOLEAN DEFAULT FALSE;
---
---CREATE OR REPLACE PROCEDURE update_car_service_status()
---LANGUAGE PLPGSQL AS $$
---BEGIN
---    UPDATE cars
---    SET is_serviced = EXISTS (
---        SELECT 1
---        FROM tickets
---        WHERE cars.car_id = tickets.car_id
---    );
---    COMMIT;
---END;
---$$;
---CALL update_car_service_status();
+SELECT*
+FROM cars c;
+
+
+-- DDL --
+
+ALTER TABLE cars
+ADD COLUMN serviced BOOLEAN DEFAULT FALSE;
+
+CREATE OR REPLACE PROCEDURE update_car_service_status()
+LANGUAGE PLPGSQL AS $$
+BEGIN
+    UPDATE cars
+    SET serviced = EXISTS (
+        SELECT 1
+        FROM tickets
+        WHERE cars.car_id = tickets.car_id
+    );
+    COMMIT;
+END;
+$$;
+CALL update_car_service_status();
+
+ALTER TABLE cars
+DROP COLUMN is_serviced;
+
+ALTER TABLE salespersons 
+RENAME COLUMN salesperson_id TO sp_id;
+
+ALTER TABLE mechanics 
+RENAME COLUMN mechanic_id TO m_id;
 
 
 
