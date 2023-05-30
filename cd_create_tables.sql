@@ -1,3 +1,6 @@
+--CREATE DATABASE car_dealership;
+--
+
 CREATE TABLE Salespersons (
     salesperson_id SERIAL PRIMARY KEY,
     f_name VARCHAR(50),
@@ -94,3 +97,4 @@ CREATE TABLE Car_Parts (
     FOREIGN KEY (part_id)
         REFERENCES Parts(part_id)
 );
+
