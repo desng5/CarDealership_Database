@@ -29,4 +29,4 @@ Entity Relationship Diagram
 #Suggest Run through Queries in this order:
    1. CarDealershipERD.pdf (lucidchart)
    2. cd_create_tables_ddl.sql (Tables / Database / Alter / Remove)
-   3. cd_dml.sql (inserts)
+   3. cd_dml.sql (insert values)
