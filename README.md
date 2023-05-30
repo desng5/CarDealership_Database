@@ -13,7 +13,7 @@ The dealership sells both new and used cars, and it operates a service facility.
    8. A car brought in for service can be worked on by many mechanics, and each mechanic may work on many cars.
 
 
-##Entity Relationship Diagram
+###Entity Relationship Diagram
 7 Tables 
    - Customers
    - Salesperson
