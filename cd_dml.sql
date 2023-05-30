@@ -2,7 +2,7 @@ INSERT INTO salespersons
 VALUES
     (DEFAULT, 'Happy', 'Gilmore'),
     (DEFAULT, 'Mike', 'Jones'),
-    (DEFAULT, 'Tina', 'Faye'),
+    (DEFAULT, 'Tina', 'Faye');
    
 
 INSERT INTO customers
@@ -54,15 +54,14 @@ INSERT INTO service_repairs
 VALUES
     (DEFAULT, 'Happy Gilmore sold his red Porche 911 Roadster to Dennis Rodman, maintenance by Jamal Murray','2021-05-11', 1006.98),
     (DEFAULT, 'Mike Jones is selling a black Tesla Model Y, maintenance by Aaron Gordan', '2022-12-16', 3000),
-    (DEFAULT, 'Tina Faye sold a silver Honda Civic LX to Rob Johnson, maintenance by Bruce Brown', '2020-07-05',512.23),
+    (DEFAULT, 'Tina Faye sold a silver Honda Civic LX to Rob Johnson, maintenance by Bruce Brown', '2020-07-05',512.23);
     
 
 INSERT INTO service_tickets 
 VALUES
-    (DEFAULT, 1, 4),
+    (DEFAULT, 1, 2),
     (DEFAULT, 2, 2),
-    (DEFAULT, 3, 3),
-    (DEFAULT, 4, 2);
+    (DEFAULT, 3, 1);
 
 INSERT INTO parts
 VALUES
@@ -78,5 +77,5 @@ VALUES
     (DEFAULT, 3, 3),
     (DEFAULT, 4, 3);
     
-   
-   
+SELECT *
+FROM mechanics  ;

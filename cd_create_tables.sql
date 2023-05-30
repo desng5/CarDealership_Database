@@ -98,3 +98,30 @@ CREATE TABLE Car_Parts (
         REFERENCES Parts(part_id)
 );
 
+--SELECT*
+--FROM cars c;
+--
+--ALTER TABLE cars
+--ADD COLUMN is_serviced BOOLEAN DEFAULT FALSE;
+--
+--CREATE OR REPLACE PROCEDURE update_car_service_status()
+--LANGUAGE PLPGSQL AS $$
+--BEGIN
+--    UPDATE cars
+--    SET is_serviced = EXISTS (
+--        SELECT 1
+--        FROM tickets
+--        WHERE cars.car_id = tickets.car_id
+--    );
+--    COMMIT;
+--END;
+--$$;
+--CALL update_car_service_status();
+
+
+
+
+
+
+
+   
